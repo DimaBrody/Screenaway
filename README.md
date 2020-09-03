@@ -1,3 +1,3 @@
-# screenaway
+# Screenaway
 
-[Brody Codes (More Info)](https://www.brody.codes/app/Screenaway)
+[Brody Codes (More Info)](https://brody.codes/app/Screenaway) 💻
