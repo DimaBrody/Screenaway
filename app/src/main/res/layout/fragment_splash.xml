@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="wrap_content"
+        android:layout_weight="10"
+        android:id="@+id/splash_viewpager"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/splash_dots"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center|top"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey_10"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:text="next"
+        android:id="@+id/splash_button"
+        android:gravity="center"
+        android:clickable="true"
+        android:fontFamily="sans-serif-medium"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_grey_500"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

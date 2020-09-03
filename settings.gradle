@@ -1,0 +1,2 @@
+rootProject.name='Meditationapp'
+include ':app'

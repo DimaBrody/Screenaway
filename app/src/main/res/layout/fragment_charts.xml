@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackgroundGrey"
+    android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/charts_toolbar"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="3dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="80dp">
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetEnd="0dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="?android:attr/actionBarSize">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:text="Statistics"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:id="@+id/charts_header"
+                            android:gravity="center"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="#333"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:src="@drawable/ic_close"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:id="@+id/charts_back"
+                            android:padding="18dp"
+                            android:alpha="0.9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:tint="#333"
+                            android:layout_height="56dp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/charts_toolbar"
+                android:layout_height="1dp"
+                android:background="@color/grey_10" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/charts_toolbar"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/charts_global_time_container"
+                        android:padding="32dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Total saved time:"
+                            android:textColor="#333"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="32sp"
+                            android:layout_marginTop="8dp"
+                            tools:text="320 min"
+                            android:fontFamily="sans-serif-medium"
+                            android:id="@+id/charts_global_time"
+                            android:textColor="@color/grey_80"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/charts_recycler_data"
+                        app:layout_constraintTop_toBottomOf="@id/charts_global_time_container"
+                        android:layout_height="wrap_content"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/charts_text_timeline"
+                        app:layout_constraintTop_toBottomOf="@id/charts_recycler_data"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:src="@drawable/ic_timeline_black_24dp"
+                            android:tint="@color/grey_80"
+                            android:layout_gravity="center"
+                            android:padding="6dp"
+                            android:layout_height="36dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:paddingTop="28dp"
+                            android:paddingBottom="28dp"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="16dp"
+                            android:textSize="18sp"
+                            android:text="Timeline"
+                            android:textColor="@color/grey_80"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@id/charts_text_timeline"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/charts_recycler_timeline"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginBottom="40dp"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@id/charts_recycler_timeline"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="1dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

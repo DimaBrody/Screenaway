@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Screenaway</string>
+    <string name="let_s_go">Let\'s go</string>
+
+    <string name="main_text_desc">
+        Take a break from your phone and look up. Have a rest.
+    </string>
+    <string name="rules">Rules</string>
+    <string name="confirm">Confirm</string>
+
+    <string-array name="time_array">
+        <item>20 mins</item>
+        <item>30 mins</item>
+        <item>40 mins</item>
+        <item>60 mins</item>
+        <item>90 mins</item>
+    </string-array>
+
+    <string name="overlay_finish_desc">You did it! %1$s minutes for really important tasks!</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="scheduled_time">Scheduled time</string>
+    <string name="not_disturb_activation">Not Disturb Activation</string>
+</resources>
